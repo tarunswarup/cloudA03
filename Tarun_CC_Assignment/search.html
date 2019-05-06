@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="/search" method="post">
+
+    UserName : <input name="username" required type="text" />
+
+    <input name="button" type="submit" value="search"/>
+
+
+    <p></p>
+     </form>
+<p></p>
+<form action="/search" method="post">
+
+    SearchTweet : <input name="tweet" required type="text" />
+
+    <input name="button" type="submit" value="searchTweet"/>
+
+
+    <p></p>
+    {% if checkmg == 'user' %}
+
+
+    <a href="/search">{{ ListOfUsers }}</a>
+
+    {% else %}
+ {% for tweet in templist %}
+    <p></p>
+    {{ tweet }}
+
+    {% endfor %}
+    {% endif %}
+
+
+     </form>
+
+</body>
+</html>

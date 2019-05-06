@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="/stylesheet/samplecss.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<y>
+    {% if user %}
+     Twitter {{ user.email() }} <br/>
+    <br/>
+
+    <p align="right">{{ login_logout }} <a href="{{ login_logouturl }}">here</a></p>
+
+    <p align="right">
+
+    <a href="/profile">Profile Page</a>
+    <p></p>
+    <p align="right">
+        <a href="/search">Search User</a>
+
+</p>
+
+<form action="/add" method="post">
+    <!--Name :-->
+    <!--<p></p>-->
+    <!--<textarea rows="4" cols="50">-->
+<!--</textarea>-->
+
+</form>
+{% else %}
+<p align="center"> Hello guest welcome to the application</p>
+    <p>{{ login_logout }} <a href="{{ login_logouturl }}">here</a></p>
+
+{% endif %}
+
+    {% if ListOfUsers|length == 0 %} -- No tweets -- {% endif %}
+{% for i in ListOfUsers %}
+<p></p>
+
+<a href="/showProfile?user={{ i.username }}"> {{ i.username }}</a></br>
+
+
+<p></p>
+
+{% endfor %}
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<form action="/showProfile?username={{userName}}" method="post">
+<p align="center">
+                <input type="submit" value="follow" name="button"/>
+
+
+<input type="submit" value="unfollow" name="button"/></p>
+
+{% for i in profileList %}
+
+
+    Username : {{ i.username }}
+    <p></p>
+        First Name: {{ i.Firstname }}
+<p></p>
+
+        Last Name: {{ i.Lastname }}
+<p></p>
+    About: {{ i.collegework }}
+    <p></p>
+
+
+<p></p>
+    ------Tweet by the user------
+    <p></p>
+ {% for k in  i.tweet %}
+<p></p>
+    <li> {{ k }} </li>
+
+    {% endfor %}
+
+    {% endfor %}
+
+    <p></p>
+
+
+</body>
+</html>

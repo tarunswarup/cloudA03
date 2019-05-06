@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<form action="/profile" method="post">
+
+
+    Username : {{ ListofusersZero.username }}
+    <p></p>
+        First Name: {{ ListofusersZero.Firstname }}
+<p></p>
+
+        Last Name: {{ ListofusersZero.Lastname }}
+<p></p>
+    About: {{ ListofusersZero.collegework }}
+    <p></p>
+
+                <a href="/EditProfile?edit={{ edit }}">{{ edit }}</a></br>
+
+
+
+    <p></p>
+    Tweet :
+    <p></p>
+    <textarea name="tweet" rows="4" cols="50" maxlength="280">
+</textarea>
+    <p></p>
+                <input type="submit" value="post" name="button"/>
+<p></p>
+
+
+<p></p>
+
+
+
+
+<p></p>
+
+
+
+</body>
+</html>

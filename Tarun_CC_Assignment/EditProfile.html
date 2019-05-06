@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <form action="/EditProfile" method="post">
+    UserName:<input type="text" name="username" value="{{ UserInfo.username }}" disabled/>
+    <p></p>
+    First_name:<input type="text" name="Firstname" value="{{ UserInfo.Firstname }}" />
+       <p></p>
+    Last_name:<input type="text" name="lastname" value="{{ UserInfo.Lastname }}" />
+    <p></p>
+    College/work:<input type="text" name="collegework" value="{{ UserInfo.collegework }}" />
+<p></p>
+
+
+            <input type="submit" value="Post" name="button"/>
+
+
+</body>
+</html>

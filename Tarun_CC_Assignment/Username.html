@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/" method="post">
+    <p>
+    {% if user %}
+    <br/>
+
+        UserName : <input name="username" required type="text" />
+    <p></p>
+    First_name : <input name="firstname" required type="text" />
+
+    <p></p>
+    Last_name : <input name="lastname" required type="text" />
+
+    <p>
+           About : <input name="college/work" required type="text" maxlength="280" />
+    <p></p>
+
+
+
+
+            <input type="submit" value="Post" name="button"/>
+
+<p align="left">{{ login_logout }} <a href="{{ login_logouturl }}" >here</a></p>
+
+    {% else %}
+        <p align="left">{{ login_logout }} <a href="{{ login_logouturl }}" >here</a></p>
+
+<p align="center"> Hello guest welcome to the application</p>
+
+
+
+
+
+
+
+{% endif %}
+
+</form>
+</body>
+</html>
